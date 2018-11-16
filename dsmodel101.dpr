@@ -17,7 +17,7 @@ library dsmodel101;
 uses
   ShareMem,
   {$ifdef test2} forms, {$endif} windows, SysUtils, Classes, LargeArrays,
-  ExtParU, USpeedProc, uDCfunc, UdsModel, UdsModelS, xyTable, math, {DUtils,} uError;
+  ExtParU, USpeedProc, uDCfunc, UdsModel, UdsModelS, xyTable, math, DUtils, uError;
 
 Const
   cModelID      = 101;  {-Key to this model (=unique-ID)}

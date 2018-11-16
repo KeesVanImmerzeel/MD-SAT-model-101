@@ -47,13 +47,11 @@
         <VerInfo_Locale>1043</VerInfo_Locale>
         <DCC_Namespace>Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;System;Xml;Data;Datasnap;Web;Soap;Winapi;$(DCC_Namespace)</DCC_Namespace>
         <VerInfo_DLL>true</VerInfo_DLL>
-        <DCC_DcuOutput>c:\dexetpu</DCC_DcuOutput>
         <SanitizedProjectName>dsmodel101</SanitizedProjectName>
         <DCC_N>true</DCC_N>
         <VerInfo_Keys>FileVersion=1.0.0.0</VerInfo_Keys>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <DCC_E>false</DCC_E>
-        <DCC_ExeOutput>c:\MD-Sat\bin\DSmodels</DCC_ExeOutput>
         <DCC_Alignment>1</DCC_Alignment>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
@@ -68,30 +66,33 @@
         <DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
         <DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
     </PropertyGroup>
+    <Import Project="..\..\..\..\OPTSETS\MD-SAT-model.optset" Condition="'$(Cfg_2)'!='' And Exists('..\..\..\..\OPTSETS\MD-SAT-model.optset')"/>
     <PropertyGroup Condition="'$(Cfg_2)'!=''">
         <DCC_GenerateStackFrames>true</DCC_GenerateStackFrames>
         <DCC_Optimize>false</DCC_Optimize>
         <DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+        <CfgDependentOn>..\..\..\..\OPTSETS\MD-SAT-model.optset</CfgDependentOn>
     </PropertyGroup>
     <Import Project="..\dsmodel.optset" Condition="'$(Cfg_2_Win32)'!='' And Exists('..\dsmodel.optset')"/>
     <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
         <DCC_ExeOutput>d:\md-sat\bin\dsmodels</DCC_ExeOutput>
-        <DCC_BplOutput>..\..\..\..\..\..\dexetpu\$(Platform)\$(Config)</DCC_BplOutput>
-        <DCC_DcpOutput>..\..\..\..\..\..\dexetpu\$(Platform)\$(Config)</DCC_DcpOutput>
-        <DCC_UnitSearchPath>..\..\..\..\..\..\dexetpu\$(Platform)\$(Config)</DCC_UnitSearchPath>
-        <DCC_DcuOutput>..\..\..\..\..\..\dexetpu\$(Platform)\$(Config)</DCC_DcuOutput>
         <CfgDependentOn>..\dsmodel.optset</CfgDependentOn>
     </PropertyGroup>
+    <Import Project="..\..\..\..\OPTSETS\MD-SAT-model.optset" Condition="'$(Cfg_5)'!='' And Exists('..\..\..\..\OPTSETS\MD-SAT-model.optset')"/>
+    <Import Project="..\..\..\..\OPTSETS\MD-SAT-model.optset" Condition="'$(Cfg_4)'!='' And Exists('..\..\..\..\OPTSETS\MD-SAT-model.optset')"/>
+    <Import Project="..\dsmodel.optset" Condition="'$(Cfg_3)'!='' And Exists('..\dsmodel.optset')"/>
+    <Import Project="..\..\..\..\..\OPTSETS\Minus6.optset" Condition="'$(Cfg_3)'!='' And Exists('..\..\..\..\..\OPTSETS\Minus6.optset')"/>
     <ItemGroup>
         <DelphiCompile Include="$(MainSource)">
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
+        <BuildConfiguration Include="Base">
+            <Key>Base</Key>
+        </BuildConfiguration>
         <BuildConfiguration Include="Debug">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>
-        </BuildConfiguration>
-        <BuildConfiguration Include="Base">
-            <Key>Base</Key>
+            <DependentOn>..\..\..\..\OPTSETS\MD-SAT-model.optset</DependentOn>
         </BuildConfiguration>
         <BuildConfiguration Include="Release">
             <Key>Cfg_1</Key>
@@ -110,8 +111,10 @@
                     <Language Name="ProjectLang">$00000413</Language>
                 </Language>
                 <Excluded_Packages>
-                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k200.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
-                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp200.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\bcboffice2k250.bpl">Embarcadero C++Builder Office 2000 Servers Package</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\bcbofficexp250.bpl">Embarcadero C++Builder Office XP Servers Package</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k250.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp250.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
                 </Excluded_Packages>
             </Delphi.Personality>
             <Platforms>
