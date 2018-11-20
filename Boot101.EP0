@@ -1,0 +1,59 @@
+************* EParray[ cEP0 ]: DefaultBootFile *********************************
+9              Aantal tijdsonafhankelijke tabellen: == 2! (=xInDep)
+0             ***table 0: table-type 0 (no interpolation) 
+20  1         ***table 0: cNr_TINTode_Create_Settings (rows), 1 columns
+1             1:  IAlgRout      Algorithm-routine for integration
+1             2:  IStepRout     Stepper-routine for integration
+0             3:  IDCRoot       Functie voor het insluiten van een discontinuiteit
+0             4:  IDCStepRout   Stepper-routine voor modellen met discontinuiteiten
+1             5:  IDriver       Driver-routine for integration
+1             6:  I_nsubstep    Aantal sub-stappen in sommige algorithme-routines
+1             7:  I_nstep       Aantal sub-stappen in sommige stepper-routines
+1000          8:  I_maxstp      Max. aantal stappen idem
+2             9:  I_htry        Initiele stapgrootte
+0.01          10: I_hmin        Minimale stapgrootte
+0.01          11: I_eps         Tolerantie
+0             12: cModelID               * WORDT OVERSCHREVEN DOOR BOOT-PROCEDURE
+0             13: ReadyToRun             * WORDT OVERSCHREVEN DOOR BOOT-PROCEDURE
+0             14: cNrOfRPs               * WORDT OVERSCHREVEN DOOR BOOT-PROCEDURE
+0             15: cNrOfSQRQs             * WORDT OVERSCHREVEN DOOR BOOT-PROCEDURE
+0             16: cNrOfAvSpeedsToExport  * WORDT OVERSCHREVEN DOOR BOOT-PROCEDURE
+1             17: Area: wordt in Shell-omgeving vervangen door Shell-waarde
+0             18: Current_xs             * WORDT OVERSCHREVEN DOOR BOOT-PROCEDURE
+0             19: nDC                    * WORDT OVERSCHREVEN DOOR BOOT-PROCEDURE
+0             20: GERESERVEERD
+0             ***table 1: table-type 0 (no interpolation) 
+3  11         ***table 1: NrOfDepVar (rows), cNrOfDepVarOptions columns;  
+0   0 0 0 0 0    1 1        1 1 1 ystart[ 1 ]; Nat.neersl.overschot wordt NIET uitgevoerd.
+0   2 3 0 0 0    1 0.442857 1 1 1 ystart[ 2 ]; Uitsp. (kg N/ha/jr) Conc. (mg NO3/l)
+0   2 0 0 0 0    1 1        1 1 1 ystart[ 3 ]; Gewasopn. + denitrificatie i.d. wortelzone (=(Nniveau - Un_niveau), kg N/ha/jr)
+0             ***table 2: table-type 0 (no interpolation) 
+1  8          ***table 2: rows, columns; Min/max values of key-values
+1 8  1 5  1 3 0 1000 Gt, Landgebruik, Bodemsoort, KoeienPha
+0             ***table 3: table-type 0 (no interpolation)
+5 3           ***table 3: p. 10: Fractie voor berekening basis-N-uitspoeling (-); zand=1; klei=2; veen=3 
+ 1.00   0.33  0.33  Landgebruik=1 (gras)      cLandgebruikBodemsoortCombinatieOngeldig = -9001;    
+ 1.33   1.67 -9001  Landgebruik=2 (bouwland)  cBasisuitspoelingOnbekend = -9002;
+ 1.33   1.67 -9001  Landgebruik=3 (mais)
+ 3.35  -9002 -9002  Landgebruik=4 (natuur)     
+ 1.58  -9002 -9002  Landgebruik=5 (stedelijk)
+0             ***table 4: table-type 0 (no interpolation)
+1 4           ***table 4: Tabel 3 p. 10: Humusgehalte per bodemsoort; zand=1; klei=2; veen=3 
+ 4.0 8.0 10.0 0.17        Het vierde getal geeft de fractie f op pag. 9.
+0             ***table 5: table-type 0 (no interpolation)
+5 9           ***table 5: Tabel 5 p. 11: Constanten voor rel. N-uitspoeling; zand=1; klei=2; veen=3 
+0.010   400    30 0.010   250     8   0.1   200     3 Landgebruik=1 (gras)      cLandgebruikBodemsoortCombinatieOngeldig = -9001;    
+0.001   400    50 0.005   150    15 -9001 -9001 -9001 Landgebruik=2 (bouwland)  cConstRelNuitspOnbekend=-9003
+0.004   300    55 0.005   150    15 -9001 -9001 -9001 Landgebruik=3 (mais)
+0.010   400    30 -9003 -9003 -9003 -9003 -9003 -9003 Landgebruik=4 (natuur)
+0.010   400    30 -9003 -9003 -9003 -9003 -9003 -9003 Landgebruik=5 (stedelijk) 
+0             ***table 6: table-type 0 (no interpolation)
+1 5           ***table 6: Tabel 6 p. 13: Uitspoelingsfractie winter-seizoen (-)  
+0.35 0.50 0.50 0.499 0.499  Gras=1; Bouwland=2; Mais=3; Natuur=4; Stedelijk=5 cUitspFractOnbekend=-9004; 0.499=gokje
+0             ***table 7: table-type 0 (no interpolation)
+1 8           ***table 7: Tabel 7 p. 15: Corr.factoren op N-uitsp. (-)
+0.00 0.05 0.10 0.40 0.50 0.60 0.75 1.00  Gt=1-7 en 7* (8)
+0             ***table 8: table-type 0 (no interpolation)
+1 5           ***table 8: Par.voor.ber. uitsp. weidemest (p. 14)
+0.8 0.1 0.12 0.25 20000   dWei, cOpp, eNH3, deltaN, melk (>5000!)
+0             Aantal tijdsafhankelijk (xy)-tabellen **********************************
